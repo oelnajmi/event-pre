@@ -1,14 +1,14 @@
 const Navbar = () => {
   return (
-    <nav className="w-full top-0 left-0">
-      <div className="flex flex-wrap justify-between items-center mx-auto border-b">
+    <nav className="w-full top-0 left-0 pt-6">
+      <div className="flex flex-wrap justify-between items-center mx-auto">
         <a className="flex items-center flex-1">
           <span className="self-center text-3xl font-extrabold whitespace-nowrap text-[#6E41E2]">
             EventPre
           </span>
         </a>
-        <div className="hidden justify-around items-center w-full md:flex sm:w-auto flex-1">
-          <ul className="flex flex-col p-4 mt-4 sm:flex-row space-x-8 sm:text-sm sm:font-medium">
+        <div className="hidden md:flex md:w-auto">
+          <ul className="flex justify-between items-center space-x-8 text-lg font-semibold">
             <li>
               <a href="#" className="" aria-current="page">
                 Home
