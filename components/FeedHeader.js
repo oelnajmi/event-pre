@@ -4,11 +4,12 @@ const FeedHeader = () => {
   return (
     <div className="rounded-3xl mt-10 md:mt-20 mx-auto flex flex-wrap flex-col md:flex-row items-center">
       <div className="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
-        <h1 className="my-4 text-3xl font-extrabold md:text-5xl text-[#6E41E2] leading-tight text-center md:text-left slide-in-bottom-h1">
-          Build Your Audience. Sell Your Tickets.
+        <h1 className="my-4 text-3xl font-extrabold md:text-5xl leading-tight text-center md:text-left slide-in-bottom-h1">
+          Build Your Audience. Sell Your{' '}
+          <span className="text-[#6E41E2]">Tickets.</span>
         </h1>
-        <p className="hidden sm:block leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">
-          The easiest way to share your event to all social media platforms!
+        <p className="hidden sm:block font-normal leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">
+          The easiest way to share your event across all social media platforms!
         </p>
 
         <div className="hidden sm:flex w-full justify-center sm:justify-start sm:pb-0 fade-in">
