@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const FeedHeader = () => {
   return (
-    <div className="bg-slate-100 p-6 rounded-3xl mt-10 md:mt-20 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+    <div className="rounded-3xl mt-10 md:mt-20 mx-auto flex flex-wrap flex-col md:flex-row items-center">
       <div className="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
         <h1 className="my-4 text-3xl font-extrabold md:text-5xl text-[#6E41E2] leading-tight text-center md:text-left slide-in-bottom-h1">
           Build Your Audience. Sell Your Tickets.
