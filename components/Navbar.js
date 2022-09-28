@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const Navbar = () => {
   return (
     <nav className="w-full top-0 left-0 pt-6">
@@ -27,12 +29,14 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex space-x-8 flex-1 justify-end">
-          <button
-            type="button"
-            className="hidden md:block text-white bg-[#6E41E2] font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
-          >
-            Log In
-          </button>
+          <Link href="/SignIn">
+            <button
+              type="button"
+              className="hidden md:block text-white bg-[#6E41E2] font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+            >
+              Log In
+            </button>
+          </Link>
           <button
             type="button"
             className="hidden md:block text-white bg-[#6E41E2] font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
