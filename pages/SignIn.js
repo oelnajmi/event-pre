@@ -50,7 +50,7 @@ const SignIn = () => {
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
-                  <div className="flex justify-center space-x-4 items-center border-4 w-full">
+                  <div className="flex justify-center space-x-4 items-center border-2 rounded-lg p-2 w-full">
                     <div>
                       <Image
                         src="/icons8-google.svg"
