@@ -1,3 +1,4 @@
+import FeedHeader from '../components/FeedHeader';
 import Navbar from '../components/Navbar';
 
 const Home = () => {
@@ -5,6 +6,7 @@ const Home = () => {
     <div>
       <main className="min-h-screen flex flex-col max-w-[1500px] mx-auto p-4">
         <Navbar />
+        <FeedHeader />
       </main>
     </div>
   );
