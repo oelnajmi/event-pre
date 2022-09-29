@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className="w-full top-0 left-0">
+    <nav className="w-full top-0 left-0 z-10">
       <div className="shadow-md sm:shadow-none flex sm:flex-col justify-between items-center mx-auto">
         <a className="tracking-widest sm:p-10 p-4 sm:text-center w-full sm:border-x sm:border-b border-black">
           <span className="font-burtons text-center text-3xl sm:text-6xl text-accent-content font-extrabold whitespace-nowrap primary-text-color">
