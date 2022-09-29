@@ -22,7 +22,7 @@ const FeedHeader = () => {
         </div>
       </div>
 
-      <div className="w-full xl:w-3/5 py-6 overflow-y-hidden order-first sm:order-last">
+      <div className="w-full xl:w-3/5 py-6 -z-10 overflow-y-hidden order-first sm:order-last">
         <Image
           src="/undraw_online_posts_re_7ucl.svg"
           alt="Vercel Logo"

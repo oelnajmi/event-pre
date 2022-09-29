@@ -1,9 +1,10 @@
+import { Menu, Transition } from '@headlessui/react';
 import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className="w-full top-0 left-0 pt-6">
-      <div className="flex flex-wrap justify-between items-center mx-auto">
+    <nav className="w-full top-0 left-0 sm:mt-6 ">
+      <div className="p-4 sm:p-0 shadow-md sm:shadow-none pb-4 pt-4 flex flex-wrap justify-between items-center mx-auto">
         <a className="flex items-center flex-1">
           <span className="self-center text-3xl font-extrabold whitespace-nowrap primary-text-color">
             EventPre
@@ -45,28 +46,47 @@ const Navbar = () => {
               Sign Up
             </button>
           </Link>
-          <button
-            data-collapse-toggle="navbar-sticky"
-            type="button"
-            className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-sticky"
-            aria-expanded="false"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+          <Menu as="div" className="sm:hidden relative inline-block text-left">
+            <Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z"
+                />
+              </svg>
+            </Menu.Button>
+
+            <Transition
+              enter="transition duration-100 ease-out"
+              enterFrom="transform scale-95 opacity-0"
+              enterTo="transform scale-100 opacity-100"
+              leave="transition duration-75 ease-out"
+              leaveFrom="transform scale-100 opacity-100"
+              leaveTo="transform scale-95 opacity-0"
             >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
-          </button>
+              <Menu.Items className="absolute right-0 mt-2 w-56 divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Item>
+                  <button className="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm">
+                    Duplicate
+                  </button>
+                </Menu.Item>
+                <Menu.Item>
+                  <button className="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm">
+                    Duplicate
+                  </button>
+                </Menu.Item>
+                {/* ... */}
+              </Menu.Items>
+            </Transition>
+          </Menu>
         </div>
       </div>
     </nav>
