@@ -6,7 +6,7 @@ const FeedHeader = () => {
       <div className="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
         <h1 className="my-4 text-3xl font-extrabold md:text-5xl leading-tight text-center md:text-left slide-in-bottom-h1">
           Build Your Audience. Sell Your{' '}
-          <span className="text-[#6E41E2]">Tickets.</span>
+          <span className="primary-text-color">Tickets.</span>
         </h1>
         <p className="hidden sm:block font-normal leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">
           The easiest way to share your event across all social media platforms!
@@ -15,7 +15,7 @@ const FeedHeader = () => {
         <div className="hidden sm:flex w-full justify-center sm:justify-start sm:pb-0 fade-in">
           <button
             type="button"
-            className="hidden md:block text-white bg-[#6E41E2] font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+            className="hidden md:block text-white primary-bg-color font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
           >
             Create Event
           </button>

@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="w-full top-0 left-0 pt-6">
       <div className="flex flex-wrap justify-between items-center mx-auto">
         <a className="flex items-center flex-1">
-          <span className="self-center text-3xl font-extrabold whitespace-nowrap text-[#6E41E2]">
+          <span className="self-center text-3xl font-extrabold whitespace-nowrap primary-text-color">
             EventPre
           </span>
         </a>
@@ -32,14 +32,14 @@ const Navbar = () => {
           <Link href="/SignIn">
             <button
               type="button"
-              className="hidden md:block text-white bg-[#6E41E2] font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+              className="hidden md:block text-white primary-bg-color button-shape"
             >
               Log In
             </button>
           </Link>
           <button
             type="button"
-            className="hidden md:block text-white bg-[#6E41E2] font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+            className="hidden md:block text-white primary-bg-color button-shape"
           >
             Sign Up
           </button>

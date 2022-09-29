@@ -7,10 +7,10 @@ const SignIn = () => {
         <div class="container px-6 py-12 h-full">
           <div class="flex justify-center items-center flex-wrap h-full text-gray-800">
             <div class="md:w-8/12 lg:w-5/12 p-10 border rounded-lg">
-              <div className="pb-4 text-center text-3xl font-extrabold whitespace-nowrap text-[#6E41E2]">
+              <div className="pb-4 text-center text-3xl font-extrabold whitespace-nowrap primary-text-color">
                 EventPre
               </div>
-              <div className="pb-4 text-center text-3xl font-extrabold whitespace-nowrap text-[#6E41E2]">
+              <div className="pb-4 text-center text-3xl font-extrabold whitespace-nowrap primary-text-color">
                 <Image
                   className="items-center mx-auto"
                   src="/undraw_login.svg"
@@ -42,7 +42,7 @@ const SignIn = () => {
 
                 <button
                   type="submit"
-                  class="inline-block text-white w-full bg-[#6E41E2] font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+                  class="inline-block text-white w-full primary-bg-color button-shape"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
@@ -54,7 +54,7 @@ const SignIn = () => {
                 </div>
 
                 <a
-                  class="inline-block w-full bg-white text-black font-medium rounded-lg text-sm text-center mr-3 md:mr-0"
+                  class="inline-block w-full bg-white text-black button-shape p-0"
                   href="#!"
                   role="button"
                   data-mdb-ripple="true"
