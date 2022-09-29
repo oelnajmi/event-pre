@@ -26,14 +26,14 @@ const SignUp = () => {
               </div>
               <form>
                 <div className="flex space-x-4">
-                  <div class="mb-6">
+                  <div class="mb-6 w-full">
                     <input
                       type="text"
                       class="form-control register-input"
                       placeholder="First Name"
                     />
                   </div>
-                  <div class="mb-6">
+                  <div class="mb-6 w-full">
                     <input
                       type="text"
                       class="form-control register-input"
