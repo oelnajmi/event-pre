@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const FeedHeader = () => {
   return (
-    <div class="z-0 hero border-x border-b border-black">
+    <div class="bg-secondary z-0 hero border-x border-b border-black">
       <div class="hero-content max-w-full justify-evenly flex-col sm:flex-row-reverse">
         <Image
           src="/undraw_visualization_re_1kag.svg"

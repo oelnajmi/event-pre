@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className="w-full top-0 left-0 z-10">
+    <nav className="w-full top-0 left-0 z-10 bg-primary">
       <div className="shadow-md sm:shadow-none flex sm:flex-col justify-between items-center mx-auto">
         <a className="tracking-widest sm:p-10 p-4 sm:text-center w-full sm:border-x sm:border-b border-black">
           <span className="font-burtons text-center text-3xl sm:text-6xl text-accent-content font-extrabold whitespace-nowrap primary-text-color">
@@ -14,17 +14,23 @@ const Navbar = () => {
           <ul className="hidden sm:flex justify-around text-center items-center space-x-8 text-lg font-semibold">
             <li>
               <a href="#" className="" aria-current="page">
-                Home
+                <button className="btn bg-white text-black hidden sm:block">
+                  Home
+                </button>
               </a>
             </li>
             <li>
               <a href="#" className="">
-                About
+                <button className="btn bg-white text-black hidden sm:block">
+                  About
+                </button>
               </a>
             </li>
             <li>
               <a href="#" className="dropdown dropdown-hover">
-                Services
+                <button className="btn bg-white text-black hidden sm:block">
+                  Services
+                </button>
               </a>
             </li>
           </ul>

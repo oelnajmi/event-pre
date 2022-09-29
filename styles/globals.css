@@ -9,7 +9,7 @@
 
 @layer base {
   body {
-    @apply bg-white;
+    @apply bg-slate-400;
     /* @apply bg-gradient-to-b from-gray-900 via-red-100 to-gray-900; */
   }
 }
