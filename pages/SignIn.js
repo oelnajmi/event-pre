@@ -2,14 +2,24 @@ import Image from 'next/image';
 
 const SignIn = () => {
   return (
-    <main className="min-h-screen flex flex-col max-w-[1500px] mx-auto p-4">
-      <section class="h-screen">
+    <main className="min-h-screen justify-around flex flex-col max-w-[1500px] mx-auto p-4">
+      <section class="">
         <div class="container px-6 py-12 h-full">
           <div class="flex justify-center items-center flex-wrap h-full text-gray-800">
             <div class="md:w-8/12 lg:w-5/12 p-10 border rounded-lg">
-              <div className="pb-10 text-center text-3xl font-extrabold whitespace-nowrap text-[#6E41E2]">
+              <div className="pb-4 text-center text-3xl font-extrabold whitespace-nowrap text-[#6E41E2]">
                 EventPre
               </div>
+              <div className="pb-4 text-center text-3xl font-extrabold whitespace-nowrap text-[#6E41E2]">
+                <Image
+                  className="items-center mx-auto"
+                  src="/undraw_login.svg"
+                  alt="Vercel Logo"
+                  width={100}
+                  height={100}
+                />
+              </div>
+
               <div className="mb-10 text-center text-3xl font-extrabold whitespace-nowrap">
                 Log in
               </div>
