@@ -6,7 +6,14 @@ module.exports = {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        burtons: 'burtons',
+      },
+    },
   },
-  plugins: [],
+  daisyui: {
+    themes: ['retro'],
+  },
+  plugins: [require('daisyui')],
 };

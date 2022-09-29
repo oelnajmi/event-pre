@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'burtons';
+  src: url('../public/Burtons.otf');
+}
+
+@layer base {
+  body {
+    @apply bg-white;
+    /* @apply bg-gradient-to-b from-gray-900 via-red-100 to-gray-900; */
+  }
+}
+
 @layer components {
   .primary-bg-color {
     @apply bg-[#6E41E2];
