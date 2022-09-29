@@ -2,7 +2,7 @@ import DiscoverComponent from './DiscoverComponent';
 
 const Discover = () => {
   return (
-    <div className="border-x border-b border-black p-2">
+    <div className="border-x border-b border-black p-10 sm:pr-36 sm:pl-36">
       <div className="p-6 font-burtons text-center text-6xl whitespace-nowrap">
         DISCOVER
       </div>

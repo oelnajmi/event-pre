@@ -10,7 +10,7 @@ const Navbar = () => {
             EVENTPRE
           </span>
         </a>
-        <div className="flex justify-between md:space-x-8 sm:p-10 text-center w-full sm:border-x sm:border-b border-black">
+        <div className="sm:pl-36 sm:pr-36 flex justify-between md:space-x-8 sm:p-10 text-center w-full sm:border-x sm:border-b border-black">
           <ul className="hidden sm:flex justify-around text-center items-center space-x-8 text-lg font-semibold">
             <li>
               <a href="#" className="" aria-current="page">

@@ -1,6 +1,6 @@
 const Trending = () => {
   return (
-    <div className="border-x border-b border-black p-2">
+    <div className="border-x border-b border-black p-10">
       <div className="p-6 font-burtons text-center text-6xl whitespace-nowrap">
         TRENDING
       </div>
