@@ -37,12 +37,14 @@ const Navbar = () => {
               Log In
             </button>
           </Link>
-          <button
-            type="button"
-            className="hidden md:block text-white primary-bg-color button-shape"
-          >
-            Sign Up
-          </button>
+          <Link href="/SignUp">
+            <button
+              type="button"
+              className="hidden md:block text-white primary-bg-color button-shape"
+            >
+              Sign Up
+            </button>
+          </Link>
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
