@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 const FeedHeader = () => {
   return (
-    <div class="bg-secondary z-0 hero border-x border-b border-black">
-      <div class="hero-content max-w-full justify-evenly flex-col sm:flex-row-reverse">
+    <div class="bg-secondary z-0 hero border-x border-b border-black p-10 sm:pr-36 sm:pl-36">
+      <div class="hero-content p-0 max-w-full justify-between flex-col sm:flex-row-reverse">
         <Image
           src="/undraw_visualization_re_1kag.svg"
           width={500}
@@ -23,7 +23,7 @@ const FeedHeader = () => {
             price once you hit your sales target!
           </p>
           <div className="text-center sm:text-left">
-            <button class="btn btn-accent">Get Started</button>
+            <button class="btn glass btn-accent bg-accent">Get Started</button>
           </div>
         </div>
       </div>

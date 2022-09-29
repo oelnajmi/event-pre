@@ -14,21 +14,21 @@ const Navbar = () => {
           <ul className="hidden sm:flex justify-around text-center items-center space-x-8 text-lg font-semibold">
             <li>
               <a href="#" className="" aria-current="page">
-                <button className="btn bg-white text-black hidden sm:block">
+                <button className="btn glass bg-white text-black hidden sm:block">
                   Home
                 </button>
               </a>
             </li>
             <li>
               <a href="#" className="">
-                <button className="btn bg-white text-black hidden sm:block">
+                <button className="btn glass bg-white text-black hidden sm:block">
                   About
                 </button>
               </a>
             </li>
             <li>
               <a href="#" className="dropdown dropdown-hover">
-                <button className="btn bg-white text-black hidden sm:block">
+                <button className="btn glass bg-white text-black hidden sm:block">
                   Services
                 </button>
               </a>
@@ -36,12 +36,12 @@ const Navbar = () => {
           </ul>
           <div className="flex space-x-8">
             <Link href="/SignIn">
-              <button className="btn bg-white text-black hidden sm:block">
+              <button className="btn glass bg-white text-black hidden sm:block">
                 Log in
               </button>
             </Link>
             <Link href="/SignUp">
-              <button className="btn bg-white text-black hidden sm:block">
+              <button className="btn glass bg-white text-black hidden sm:block">
                 Sign Up
               </button>
             </Link>
