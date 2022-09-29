@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const SignIn = () => {
   return (
@@ -73,6 +74,11 @@ const SignIn = () => {
                   </div>
                 </a>
               </form>
+              <div className="p-4 text-sm font-semibold text-slate-800 text-center">
+                <Link href="/SignUp">
+                  <a>Create Account</a>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
