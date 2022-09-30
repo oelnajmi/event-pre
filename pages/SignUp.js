@@ -7,9 +7,14 @@ const SignUp = () => {
       <section class="">
         <div class="container px-6 py-12 h-full">
           <div class="flex justify-center items-center flex-wrap h-full text-gray-800">
-            <div class="md:w-8/12 lg:w-5/12 p-10 border rounded-lg">
+            <div class="md:w-8/12 lg:w-5/12 p-10 border border-black">
               <div className="pb-4 text-center text-3xl font-extrabold whitespace-nowrap primary-text-color">
-                EventPre
+                <span className="font-burtons text-center text-3xl sm:text-3xl text-accent-content font-extrabold whitespace-nowrap primary-text-color">
+                  <span className="hidden lg:block">
+                    THE TWENTY DOLLAR STORE
+                  </span>{' '}
+                  <span className="lg:hidden">THE $20 STORE</span>
+                </span>
               </div>
               <div className="pb-4 text-center text-3xl font-extrabold whitespace-nowrap primary-text-color">
                 <Image
@@ -21,7 +26,7 @@ const SignUp = () => {
                 />
               </div>
 
-              <div className="mb-10 text-center text-3xl font-extrabold whitespace-nowrap">
+              <div className="mb-10 font-burtons text-center text-3xl font-extrabold whitespace-nowrap">
                 Sign up
               </div>
               <form>
@@ -59,7 +64,7 @@ const SignUp = () => {
 
                 <button
                   type="submit"
-                  class="inline-block text-white w-full primary-bg-color button-shape"
+                  class="btn glass text-black w-full bg-slate-200 hover:cursor-pointer"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
@@ -69,7 +74,7 @@ const SignUp = () => {
                   <p class="text-center font-semibold mx-4 mb-0">OR</p>
                 </div>
               </form>
-              <div className="p-4 text-sm font-semibold text-slate-800 text-center">
+              <div className="p-4 text-sm font-semibold text-slate-800 text-center hover:text-blue-500">
                 <Link href="/SignIn">
                   <a>Sign in</a>
                 </Link>

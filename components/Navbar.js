@@ -3,14 +3,15 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className="w-full top-0 left-0 z-10 bg-primary">
+    <nav className="w-full top-0 left-0 z-10">
       <div className="shadow-md sm:shadow-none flex sm:flex-col justify-between items-center mx-auto">
         <a className="tracking-widest sm:p-10 p-4 sm:text-center w-full sm:border-x sm:border-b border-black">
           <span className="font-burtons text-center text-3xl sm:text-6xl text-accent-content font-extrabold whitespace-nowrap primary-text-color">
-            EVENTPRE
+            <span className="hidden lg:block">THE TWENTY DOLLAR STORE</span>{' '}
+            <span className="lg:hidden">THE $20 STORE</span>
           </span>
         </a>
-        <div className="sm:pl-36 sm:pr-36 flex justify-between md:space-x-8 sm:p-10 text-center w-full sm:border-x sm:border-b border-black">
+        <div className="sm:pl-36 sm:pr-36 flex justify-around md:space-x-8 sm:p-10 text-center w-full sm:border-x sm:border-b border-black">
           <ul className="hidden sm:flex justify-around text-center items-center space-x-8 text-lg font-semibold">
             <li>
               <a href="#" className="" aria-current="page">
@@ -21,7 +22,7 @@ const Navbar = () => {
             </li>
             <li>
               <a href="#" className="">
-                <button className="btn glass bg-white text-black hidden sm:block">
+                <button className="btn glass bg-white text-black hidden sm:block ">
                   About
                 </button>
               </a>
@@ -33,8 +34,6 @@ const Navbar = () => {
                 </button>
               </a>
             </li>
-          </ul>
-          <div className="flex space-x-8">
             <Link href="/SignIn">
               <button className="btn glass bg-white text-black hidden sm:block">
                 Log in
@@ -45,7 +44,7 @@ const Navbar = () => {
                 Sign Up
               </button>
             </Link>
-          </div>
+          </ul>
           <div className="sm:hidden ">
             <Menu as="div" className="relative inline-block text-left">
               <Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium">

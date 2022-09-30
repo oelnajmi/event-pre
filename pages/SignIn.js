@@ -7,9 +7,14 @@ const SignIn = () => {
       <section class="">
         <div class="container px-6 py-12 h-full">
           <div class="flex justify-center items-center flex-wrap h-full text-gray-800">
-            <div class="md:w-8/12 lg:w-5/12 p-10 border rounded-lg">
-              <div className="pb-4 text-center text-3xl font-extrabold whitespace-nowrap primary-text-color">
-                EventPre
+            <div class="md:w-8/12 lg:w-5/12 p-10 border border-black">
+              <div className="pb-4 text-center text-3xl font-extrabold whitespace-nowrap">
+                <span className="font-burtons text-center text-3xl sm:text-3xl text-accent-content font-extrabold whitespace-nowrap primary-text-color">
+                  <span className="hidden lg:block">
+                    THE TWENTY DOLLAR STORE
+                  </span>{' '}
+                  <span className="lg:hidden">THE $20 STORE</span>
+                </span>
               </div>
               <div className="pb-4 text-center text-3xl font-extrabold whitespace-nowrap primary-text-color">
                 <Image
@@ -21,7 +26,7 @@ const SignIn = () => {
                 />
               </div>
 
-              <div className="mb-10 text-center text-3xl font-extrabold whitespace-nowrap">
+              <div className="mb-10 font-burtons text-center text-3xl font-extrabold whitespace-nowrap">
                 Log in
               </div>
               <form>
@@ -43,7 +48,7 @@ const SignIn = () => {
 
                 <button
                   type="submit"
-                  class="inline-block text-white w-full primary-bg-color button-shape"
+                  class="btn glass text-black w-full bg-slate-200"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
@@ -55,28 +60,30 @@ const SignIn = () => {
                 </div>
 
                 <a
-                  class="inline-block w-full bg-white text-black button-shape p-0"
+                  class="inline-block w-full "
                   href="#!"
                   role="button"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
-                  <div className="flex justify-center space-x-4 items-center border-2 rounded-lg p-2 w-full">
-                    <div>
-                      <Image
-                        src="/icons8-google.svg"
-                        alt="Vercel Logo"
-                        width={30}
-                        height={30}
-                      />
+                  <div className="bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] rounded-lg p-1 w-full">
+                    <div className="flex justify-center space-x-4 items-center bg-white text-black rounded-md p-2">
+                      <div>
+                        <Image
+                          src="/icons8-google.svg"
+                          alt="Vercel Logo"
+                          width={30}
+                          height={30}
+                        />
+                      </div>
+                      <div>Continue with Google</div>
                     </div>
-                    <div>Continue with Google</div>
                   </div>
                 </a>
               </form>
               <div className="p-4 text-sm font-semibold text-slate-800 text-center">
                 <Link href="/SignUp">
-                  <a>Create Account</a>
+                  <a className="hover:text-blue-600">Create Account</a>
                 </Link>
               </div>
             </div>
