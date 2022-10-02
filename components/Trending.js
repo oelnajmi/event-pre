@@ -6,7 +6,7 @@ const Trending = () => {
       <div className="p-6 font-burtons text-center text-6xl whitespace-nowrap">
         {/* TRENDING */}
       </div>
-      <div class="pb-6 grid grid-cols-1 sm:grid-cols-4 gap-4">
+      <div className="pb-6 grid grid-cols-1 sm:grid-cols-4 gap-4">
         <Post />
         <Post />
         <Post />

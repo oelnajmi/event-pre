@@ -4,10 +4,10 @@ import Link from 'next/link';
 const SignIn = () => {
   return (
     <main className="min-h-screen justify-around flex flex-col max-w-[1500px] mx-auto p-4">
-      <section class="">
-        <div class="container px-6 py-12 h-full">
-          <div class="flex justify-center items-center flex-wrap h-full text-gray-800">
-            <div class="md:w-8/12 lg:w-5/12 p-10 border border-black">
+      <section className="">
+        <div className="container px-6 py-12 h-full">
+          <div className="flex justify-center items-center flex-wrap h-full text-gray-800">
+            <div className="md:w-8/12 lg:w-5/12 p-10 border border-black">
               <div className="pb-4 text-center text-3xl font-extrabold whitespace-nowrap">
                 <span className="font-burtons text-center text-3xl sm:text-3xl text-accent-content font-extrabold whitespace-nowrap primary-text-color">
                   <span className="hidden lg:block">
@@ -30,37 +30,37 @@ const SignIn = () => {
                 Log in
               </div>
               <form>
-                <div class="mb-6">
+                <div className="mb-6">
                   <input
                     type="text"
-                    class="form-control register-input"
+                    className="form-control register-input"
                     placeholder="Email address"
                   />
                 </div>
 
-                <div class="mb-6">
+                <div className="mb-6">
                   <input
                     type="password"
-                    class="form-control register-input"
+                    className="form-control register-input"
                     placeholder="Password"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  class="btn glass text-black w-full bg-slate-200"
+                  className="btn glass text-black w-full bg-slate-200"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
                   Sign in
                 </button>
 
-                <div class="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
-                  <p class="text-center font-semibold mx-4 mb-0">OR</p>
+                <div className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
+                  <p className="text-center font-semibold mx-4 mb-0">OR</p>
                 </div>
 
                 <a
-                  class="inline-block w-full "
+                  className="inline-block w-full "
                   href="#!"
                   role="button"
                   data-mdb-ripple="true"
