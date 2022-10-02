@@ -1,8 +1,10 @@
-import { signIn } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const SignIn = () => {
+  const { data: session } = useSession();
+
   return (
     <main className="min-h-screen justify-around flex flex-col max-w-[1500px] mx-auto p-4">
       <section className="">
@@ -47,14 +49,16 @@ const SignIn = () => {
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  className="btn glass text-black w-full bg-slate-200"
-                  data-mdb-ripple="true"
-                  data-mdb-ripple-color="light"
-                >
-                  Sign in
-                </button>
+                {session && (
+                  <button
+                    type="submit"
+                    className="btn glass text-black w-full bg-slate-200"
+                    data-mdb-ripple="true"
+                    data-mdb-ripple-color="light"
+                  >
+                    Sign in
+                  </button>
+                )}
 
                 <div className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
                   <p className="text-center font-semibold mx-4 mb-0">OR</p>

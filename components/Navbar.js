@@ -1,7 +1,10 @@
 import { Menu, Transition } from '@headlessui/react';
+import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 
 const Navbar = () => {
+  const { data: session } = useSession();
+
   return (
     <nav className="w-full top-0 left-0 z-10">
       <div className="shadow-md sm:shadow-none flex sm:flex-col justify-between items-center mx-auto">
@@ -34,16 +37,38 @@ const Navbar = () => {
                 </button>
               </a>
             </li>
-            <Link href="/SignIn">
-              <button className="btn glass bg-white text-black hidden sm:block">
-                Log in
-              </button>
-            </Link>
-            <Link href="/SignUp">
-              <button className="btn glass bg-white text-black hidden sm:block">
-                Sign Up
-              </button>
-            </Link>
+            {!session && (
+              <>
+                <Link href="/SignIn">
+                  <button className="btn glass bg-white text-black hidden sm:block">
+                    Log in
+                  </button>
+                </Link>
+                <Link href="/SignUp">
+                  <button className="btn glass bg-white text-black hidden sm:block">
+                    Sign Up
+                  </button>
+                </Link>
+              </>
+            )}
+            {session && (
+              <>
+                <Link href="/api/auth/signout">
+                  <a
+                    onClick={(e) => {
+                      e.preventDefault();
+                      signOut('google', {
+                        callbackUrl: 'http://localhost:3000/',
+                      });
+                    }}
+                  >
+                    <button className="btn glass bg-white text-black hidden sm:block">
+                      Log Out
+                    </button>
+                  </a>
+                </Link>
+              </>
+            )}
           </ul>
           <div className="sm:hidden ">
             <Menu as="div" className="relative inline-block text-left">

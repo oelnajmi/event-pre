@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 const SignUp = () => {
@@ -8,6 +9,9 @@ const SignUp = () => {
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const router = useRouter();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -19,9 +23,7 @@ const SignUp = () => {
         password,
         email,
       };
-      // console.log(data);
 
-      console.log(firstName);
       const JSONdata = JSON.stringify(data);
       const endpoint = '/api/users';
       const options = {
@@ -31,9 +33,13 @@ const SignUp = () => {
         },
         body: JSONdata,
       };
-
       const response = await fetch(endpoint, options);
-      console.log('helo');
+      const result = await response.json();
+      if (result.error) {
+        setError(result.error);
+      } else {
+        router.push('http://localhost:3000/');
+      }
     } catch (error) {
       console.log(error);
     }
@@ -67,6 +73,11 @@ const SignUp = () => {
                 Sign up
               </div>
               <form onSubmit={handleSubmit}>
+                {error && (
+                  <div className="mb-6 text-center form-control register-input bg-red-400">
+                    <h2>{error}</h2>
+                  </div>
+                )}
                 <div className="flex space-x-4">
                   <div className="mb-6 w-full">
                     <input
@@ -90,14 +101,17 @@ const SignUp = () => {
                     type="text"
                     className="form-control register-input"
                     placeholder="Username"
+                    minlength="6"
+                    maxlength="20"
                     onChange={(event) => setUserName(event.target.value)}
                   />
                 </div>
                 <div className="mb-6">
                   <input
-                    type="text"
+                    type="email"
                     className="form-control register-input"
                     placeholder="Email address"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     onChange={(event) => setEmail(event.target.value)}
                   />
                 </div>
