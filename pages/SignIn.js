@@ -1,3 +1,4 @@
+import { signIn } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -58,28 +59,34 @@ const SignIn = () => {
                 <div className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
                   <p className="text-center font-semibold mx-4 mb-0">OR</p>
                 </div>
-
-                <a
-                  className="inline-block w-full "
-                  href="#!"
-                  role="button"
-                  data-mdb-ripple="true"
-                  data-mdb-ripple-color="light"
-                >
-                  <div className="bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] rounded-lg p-1 w-full">
-                    <div className="flex justify-center space-x-4 items-center bg-white text-black rounded-md p-2">
-                      <div>
-                        <Image
-                          src="/icons8-google.svg"
-                          alt="Vercel Logo"
-                          width={30}
-                          height={30}
-                        />
+                <Link href="/api/auth/signin">
+                  <a
+                    className="inline-block w-full "
+                    onClick={(e) => {
+                      e.preventDefault();
+                      signIn('google', {
+                        callbackUrl: 'http://localhost:3000/',
+                      });
+                    }}
+                    role="button"
+                    data-mdb-ripple="true"
+                    data-mdb-ripple-color="light"
+                  >
+                    <div className="bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] rounded-lg p-1 w-full">
+                      <div className="flex justify-center space-x-4 items-center bg-white text-black rounded-md p-2">
+                        <div>
+                          <Image
+                            src="/icons8-google.svg"
+                            alt="Vercel Logo"
+                            width={30}
+                            height={30}
+                          />
+                        </div>
+                        <div>Continue with Google</div>
                       </div>
-                      <div>Continue with Google</div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </Link>
               </form>
               <div className="p-4 text-sm font-semibold text-slate-800 text-center">
                 <Link href="/SignUp">

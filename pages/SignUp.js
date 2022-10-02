@@ -1,7 +1,44 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const SignUp = () => {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [userName, setUserName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const data = {
+        firstName,
+        lastName,
+        userName,
+        password,
+        email,
+      };
+      // console.log(data);
+
+      console.log(firstName);
+      const JSONdata = JSON.stringify(data);
+      const endpoint = '/api/users';
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSONdata,
+      };
+
+      const response = await fetch(endpoint, options);
+      console.log('helo');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <main className="min-h-screen justify-around flex flex-col max-w-[1500px] mx-auto p-4">
       <section className="">
@@ -29,13 +66,14 @@ const SignUp = () => {
               <div className="mb-10 font-burtons text-center text-3xl font-extrabold whitespace-nowrap">
                 Sign up
               </div>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="flex space-x-4">
                   <div className="mb-6 w-full">
                     <input
                       type="text"
                       className="form-control register-input"
                       placeholder="First Name"
+                      onChange={(event) => setFirstName(event.target.value)}
                     />
                   </div>
                   <div className="mb-6 w-full">
@@ -43,6 +81,7 @@ const SignUp = () => {
                       type="text"
                       className="form-control register-input"
                       placeholder="Last Name"
+                      onChange={(event) => setLastName(event.target.value)}
                     />
                   </div>
                 </div>
@@ -50,18 +89,26 @@ const SignUp = () => {
                   <input
                     type="text"
                     className="form-control register-input"
-                    placeholder="Email address"
+                    placeholder="Username"
+                    onChange={(event) => setUserName(event.target.value)}
                   />
                 </div>
-
+                <div className="mb-6">
+                  <input
+                    type="text"
+                    className="form-control register-input"
+                    placeholder="Email address"
+                    onChange={(event) => setEmail(event.target.value)}
+                  />
+                </div>
                 <div className="mb-6">
                   <input
                     type="password"
                     className="form-control register-input"
                     placeholder="Password"
+                    onChange={(event) => setPassword(event.target.value)}
                   />
                 </div>
-
                 <button
                   type="submit"
                   className="btn glass text-black w-full bg-slate-200 hover:cursor-pointer"
