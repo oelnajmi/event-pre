@@ -33,36 +33,6 @@ const SignIn = () => {
                 Log in
               </div>
               <form>
-                <div className="mb-6">
-                  <input
-                    type="text"
-                    className="form-control register-input"
-                    placeholder="Email address"
-                  />
-                </div>
-
-                <div className="mb-6">
-                  <input
-                    type="password"
-                    className="form-control register-input"
-                    placeholder="Password"
-                  />
-                </div>
-
-                {session && (
-                  <button
-                    type="submit"
-                    className="btn glass text-black w-full bg-slate-200"
-                    data-mdb-ripple="true"
-                    data-mdb-ripple-color="light"
-                  >
-                    Sign in
-                  </button>
-                )}
-
-                <div className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
-                  <p className="text-center font-semibold mx-4 mb-0">OR</p>
-                </div>
                 <Link href="/api/auth/signin">
                   <a
                     className="inline-block w-full "
@@ -91,6 +61,33 @@ const SignIn = () => {
                     </div>
                   </a>
                 </Link>
+                <div className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
+                  <p className="text-center font-semibold mx-4 mb-0">OR</p>
+                </div>
+                <div className="mb-6">
+                  <input
+                    type="text"
+                    className="form-control register-input border-black"
+                    placeholder="Email address"
+                  />
+                </div>
+
+                <div className="mb-6">
+                  <input
+                    type="password"
+                    className="form-control register-input border-black"
+                    placeholder="Password"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="btn glass text-black w-full bg-slate-200"
+                  data-mdb-ripple="true"
+                  data-mdb-ripple-color="light"
+                >
+                  Sign in
+                </button>
               </form>
               <div className="p-4 text-sm font-semibold text-slate-800 text-center">
                 <Link href="/SignUp">

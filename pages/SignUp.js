@@ -1,3 +1,4 @@
+import { signIn } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -82,7 +83,7 @@ const SignUp = () => {
                   <div className="mb-6 w-full">
                     <input
                       type="text"
-                      className="form-control register-input"
+                      className="form-control register-input border-black"
                       placeholder="First Name"
                       onChange={(event) => setFirstName(event.target.value)}
                     />
@@ -90,7 +91,7 @@ const SignUp = () => {
                   <div className="mb-6 w-full">
                     <input
                       type="text"
-                      className="form-control register-input"
+                      className="form-control register-input border-black"
                       placeholder="Last Name"
                       onChange={(event) => setLastName(event.target.value)}
                     />
@@ -99,17 +100,17 @@ const SignUp = () => {
                 <div className="mb-6">
                   <input
                     type="text"
-                    className="form-control register-input"
+                    className="form-control register-input border-black"
                     placeholder="Username"
-                    minlength="6"
-                    maxlength="20"
+                    minLength="6"
+                    maxLength="20"
                     onChange={(event) => setUserName(event.target.value)}
                   />
                 </div>
                 <div className="mb-6">
                   <input
                     type="email"
-                    className="form-control register-input"
+                    className="form-control register-input border-black"
                     placeholder="Email address"
                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     onChange={(event) => setEmail(event.target.value)}
@@ -118,7 +119,7 @@ const SignUp = () => {
                 <div className="mb-6">
                   <input
                     type="password"
-                    className="form-control register-input"
+                    className="form-control register-input border-black"
                     placeholder="Password"
                     onChange={(event) => setPassword(event.target.value)}
                   />
@@ -135,9 +136,39 @@ const SignUp = () => {
                   <p className="text-center font-semibold mx-4 mb-0">OR</p>
                 </div>
               </form>
-              <div className="p-4 text-sm font-semibold text-slate-800 text-center hover:text-blue-500">
+              <div className="space-y-4 text-sm font-semibold text-slate-800 text-center hover:text-blue-500">
+                <Link href="/api/auth/signin">
+                  <a
+                    className="inline-block w-full "
+                    onClick={(e) => {
+                      e.preventDefault();
+                      signIn('google', {
+                        callbackUrl: 'http://localhost:3000/',
+                      });
+                    }}
+                    role="button"
+                    data-mdb-ripple="true"
+                    data-mdb-ripple-color="light"
+                  >
+                    <div className="bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] rounded-lg p-1 w-full">
+                      <div className="flex justify-center space-x-4 items-center bg-white text-black rounded-md p-2">
+                        <div>
+                          <Image
+                            src="/icons8-google.svg"
+                            alt="Vercel Logo"
+                            width={30}
+                            height={30}
+                          />
+                        </div>
+                        <div>Continue with Google</div>
+                      </div>
+                    </div>
+                  </a>
+                </Link>
                 <Link href="/SignIn">
-                  <a>Sign in</a>
+                  <div className="items-center bg-white text-black rounded-md p-3 border border-black hover:cursor-pointer">
+                    <div>Sign in with email</div>
+                  </div>
                 </Link>
               </div>
             </div>

@@ -16,7 +16,6 @@ export default async function handler(req, res) {
 
   switch (method) {
     case 'GET':
-      // console.log(req.body);
       getUsers(req, res);
       break;
     case 'POST':
